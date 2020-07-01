@@ -42,7 +42,6 @@ import threading
 from pathlib import Path, PurePath  # Python 3.4 and up
 import queue
 import copy
-import time
 from datetime import datetime
 import json
 import pyperclip
@@ -53,6 +52,9 @@ import chess.polyglot
 import logging
 import random
 import time
+
+SHOW_GUI = False
+
 
 log_format = '%(asctime)s :: %(funcName)s :: line: %(lineno)d :: %(' \
                  'levelname)s :: %(message)s'
@@ -1652,8 +1654,6 @@ class EasyChessGui:
 
         is_human_stm = True if self.is_user_white else False
 
-        move_state = 0
-        move_from, move_to = None, None
         is_new_game, is_exit_game, is_exit_app = False, False, False
 
         is_engine_ready = True
@@ -1665,48 +1665,19 @@ class EasyChessGui:
         is_user_wins = False
         is_user_draws = False
 
-        is_hide_book1 = True
-        is_hide_book2 = True
-
-        # Init timer
-        human_timer = self.define_timer(window)
-        engine_timer = self.define_timer(window)
+        if(SHOW_GUI):
+            # Init timer
+            human_timer = self.define_timer(window)
+            engine_timer = self.define_timer(window)
 
         # Game loop
         while not board.is_game_over(claim_draw=True):
-            window.refresh()
-
-            # Mode: Play, Hide book 1
-            if is_hide_book1:
-                window.Element('polyglot_book1_k').Update('')
-            else:
-                # Load 2 polyglot book files
-                ref_book1 = GuiBook(self.computer_book_file, board,
-                                    self.is_random_book)
-                all_moves, is_found = ref_book1.get_all_moves()
-                if is_found:
-                    window.Element('polyglot_book1_k').Update(all_moves)
-                else:
-                    window.Element('polyglot_book1_k').Update('no book moves')
-
-            # Mode: Play, Hide book 2
-            if is_hide_book2:
-                window.Element('polyglot_book2_k').Update('')
-            else:
-                ref_book2 = GuiBook(self.human_book_file, board,
-                                    self.is_random_book)
-                all_moves, is_found = ref_book2.get_all_moves()
-                if is_found:
-                    window.Element('polyglot_book2_k').Update(all_moves)
-                else:
-                    window.Element('polyglot_book2_k').Update('no book moves')
+            if (SHOW_GUI):
+                window.refresh()
 
             # RANDOM
             if is_human_stm :#and is_engine_ready:
                 is_promote = False
-                is_book_from_gui = True
-
-                print("Human turn...")
 
                 moves = [i for i in board.legal_moves]
                 n = random.randint(0, len(moves) - 1)
@@ -1742,31 +1713,29 @@ class EasyChessGui:
                 else:
                     # Place piece in the move to_square
                     self.psg_board[to_row][to_col] = piece
-
-                self.redraw_board(window)
+                if (SHOW_GUI):
+                    self.redraw_board(window)
 
                 board.push(best_move)
                 move_cnt += 1
 
-                # Update timer
-                human_timer.update_base()
+                if (SHOW_GUI):
+                    # Update timer
+                    human_timer.update_base()
 
-                # Update game, move from engine
-                time_left = human_timer.base
-                if is_book_from_gui:
-                    engine_comment = 'book'
-                else:
-                    engine_comment = ''
-                self.update_game(move_cnt, best_move, time_left, engine_comment)
+                    # Update game, move from engine
+                    time_left = human_timer.base
 
-                window.FindElement('_movelist_').Update(disabled=False)
-                window.FindElement('_movelist_').Update('')
-                window.FindElement('_movelist_').Update(
-                    self.game.variations[0], append=True, disabled=True)
+                    self.update_game(move_cnt, best_move, time_left, "")
 
-                # Change the color of the "fr" and "to" board squares
-                self.change_square_color(window, fr_row, fr_col)
-                self.change_square_color(window, to_row, to_col)
+
+                    window.FindElement('_movelist_').Update(disabled=False)
+                    window.FindElement('_movelist_').Update('')
+                    window.FindElement('_movelist_').Update(self.game.variations[0], append=True, disabled=True)
+
+                    # Change the color of the "fr" and "to" board squares
+                    self.change_square_color(window, fr_row, fr_col)
+                    self.change_square_color(window, to_row, to_col)
 
                 is_human_stm = not is_human_stm
                 # Engine has done its move
@@ -1777,22 +1746,21 @@ class EasyChessGui:
                     k1 = 'w_elapse_k'
                     k2 = 'w_base_time_k'
 
-                # Update elapse box
-                elapse_str = self.get_time_mm_ss_ms(human_timer.elapse)
-                window.Element(k1).Update(elapse_str)
+                if (SHOW_GUI):
+                    # Update elapse box
+                    elapse_str = self.get_time_mm_ss_ms(human_timer.elapse)
+                    window.Element(k1).Update(elapse_str)
 
-                # Update remaining time box
-                elapse_str = self.get_time_h_mm_ss(human_timer.base)
-                window.Element(k2).Update(elapse_str)
+                    # Update remaining time box
+                    elapse_str = self.get_time_h_mm_ss(human_timer.base)
+                    window.Element(k2).Update(elapse_str)
 
-                window.FindElement('_gamestatus_').Update('Mode     Play')
+                    window.FindElement('_gamestatus_').Update('Mode     Play')
                 time.sleep(0)
 
             # RANDOM 2
             elif not is_human_stm and is_engine_ready:
                 is_promote = False
-                best_move = None
-                is_book_from_gui = True
 
                 moves = [i for i in board.legal_moves]
                 n = random.randint(0, len(moves) - 1)
@@ -1829,30 +1797,28 @@ class EasyChessGui:
                     # Place piece in the move to_square
                     self.psg_board[to_row][to_col] = piece
 
-                self.redraw_board(window)
+                if (SHOW_GUI):
+                    self.redraw_board(window)
 
                 board.push(best_move)
                 move_cnt += 1
 
-                # Update timer
-                engine_timer.update_base()
+                if (SHOW_GUI):
+                    # Update timer
+                    engine_timer.update_base()
 
-                # Update game, move from engine
-                time_left = engine_timer.base
-                if is_book_from_gui:
-                    engine_comment = 'book'
-                else:
-                    engine_comment = ''
-                self.update_game(move_cnt, best_move, time_left, engine_comment)
+                    # Update game, move from engine
+                    time_left = engine_timer.base
 
-                window.FindElement('_movelist_').Update(disabled=False)
-                window.FindElement('_movelist_').Update('')
-                window.FindElement('_movelist_').Update(
-                    self.game.variations[0], append=True, disabled=True)
+                    self.update_game(move_cnt, best_move, time_left, "")
 
-                # Change the color of the "fr" and "to" board squares
-                self.change_square_color(window, fr_row, fr_col)
-                self.change_square_color(window, to_row, to_col)
+                    window.FindElement('_movelist_').Update(disabled=False)
+                    window.FindElement('_movelist_').Update('')
+                    window.FindElement('_movelist_').Update(self.game.variations[0], append=True, disabled=True)
+
+                    # Change the color of the "fr" and "to" board squares
+                    self.change_square_color(window, fr_row, fr_col)
+                    self.change_square_color(window, to_row, to_col)
 
                 is_human_stm = not is_human_stm
                 # Engine has done its move
@@ -1863,16 +1829,16 @@ class EasyChessGui:
                     k1 = 'w_elapse_k'
                     k2 = 'w_base_time_k'
 
-                # Update elapse box
-                elapse_str = self.get_time_mm_ss_ms(human_timer.elapse)
-                window.Element(k1).Update(elapse_str)
+                if (SHOW_GUI):
+                    #Update elapse box
+                    elapse_str = self.get_time_mm_ss_ms(engine_timer.elapse)
+                    window.Element(k1).Update(elapse_str)
 
-                # Update remaining time box
-                elapse_str = self.get_time_h_mm_ss(human_timer.base)
-                window.Element(k2).Update(elapse_str)
+                    #Update remaining time box
+                    elapse_str = self.get_time_h_mm_ss(engine_timer.base)
+                    window.Element(k2).Update(elapse_str)
 
-                window.FindElement('_gamestatus_').Update('Mode     Play')
-                is_book_from_gui = False
+                    window.FindElement('_gamestatus_').Update('Mode     Play')
                 time.sleep(0)
 
         # Auto-save game
@@ -1924,6 +1890,7 @@ class EasyChessGui:
         if board.is_game_over(claim_draw=True):
             sg.Popup('Game is over.', title=BOX_TITLE,
                      icon=ico_path[platform]['pecg'])
+
 
         if is_exit_app:
             window.Close()

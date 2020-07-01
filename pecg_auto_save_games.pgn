@@ -1,0 +1,48 @@
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.01"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "*"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. d3 d5 { book } *
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.01"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "*"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. e4 { book } 1... c5 { book } 2. Be2 { book } 2... Nc6 { book } 3. b4 { book } *
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.01"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "*"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. f4 { book } 1... Nf6 { book } 2. Nh3 { book } *
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.01"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "*"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. g3 { book } 1... d5 { book } 2. f4 { book } 2... g6 { book } 3. b4 { book } *
+

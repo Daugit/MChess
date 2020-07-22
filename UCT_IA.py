@@ -29,8 +29,8 @@ d = {
 
 
 def add(board, h, Table):
-    nplayouts = [0.0 for x in range(board.legal_moves.count())]  # propre au board
-    nwins = [0.0 for x in range(board.legal_moves.count())]
+    nplayouts = [0.0 for x in range(len([i for i in board.legal_moves]))]  # propre au board
+    nwins = [0.0 for x in range(len([i for i in board.legal_moves]))]
 
     Table[h] = [1, nplayouts, nwins]
 
@@ -50,7 +50,7 @@ def score(board):
     :param board:
     :return:
     """
-    return 0 if board.result(claim_draw=True) == "1-0" else 1
+    return 1 if board.result(claim_draw=True) == "0-1" else 0
 
 
 def playout(b, h, hashTable, hashTurn):
@@ -122,17 +122,20 @@ def UCT(board, h, hashTable, hashTurn, Table):
         return score(board), h
 
     t = look(h, Table)
-    print("Starting UCT...")
     if t != None:  # Selection and expansion step
         bestValue = -1000000.0
         best = 0
 
         moves = [i for i in board.legal_moves]
-        for i in range(1, len(moves)):
+        if len(moves) != len(t[1]):
+            print("Error : ", len(moves))
+            print("Error : ", len(t[1]))
+        for i in range(0, len(moves)):
+
             val = 1000000.0  # pour jouer tous les coups => ON VA JOUER TOUS LES COUPS DE PROFONDEUR 1??
             if t[1][i] > 0:
                 Q = t[2][i] / t[1][i]
-                if board.turn == BLACK:
+                if board.turn == WHITE:
                     Q = 1 - Q
                 val = Q + 0.4 * sqrt(log(t[0]) / t[1][i])
             if val > bestValue:
@@ -147,13 +150,10 @@ def UCT(board, h, hashTable, hashTurn, Table):
             t[0] += 1
             t[1][best] += 1  # mise à jour à l'indice best, qui est propre au board
             t[2][best] += res
-        print("Ending UCT t!= None...")
         return res, h
     else:  # Sampling step
         add(board, h, Table)
         score_playout, h = playout(board, h, hashTable, hashTurn)
-        print("Ending UCT t==None...")
-        print(score(board))
         return score_playout, h
 
 
@@ -162,7 +162,6 @@ def BestMoveUCT(board, h, hashTable, hashTurn, nb_playout):
     Table = {}
 
     for i in range(nb_playout):  # on met à jour la table de transposition avec les stats par coup legal
-        print("Starting calculating best move - playout ", i)
         b1 = copy.deepcopy(board)
         h1 = h
         UCT(b1, h1, hashTable, hashTurn, Table)
@@ -170,9 +169,9 @@ def BestMoveUCT(board, h, hashTable, hashTurn, nb_playout):
     moves = [i for i in board.legal_moves]
     best = moves[0]
     bestValue = t[1][0]
-    for i in range(1, len(moves)):
+    for i in range(0, len(moves)):
         if (t[1][i] > bestValue):
             bestValue = t[1][i]
             best = moves[i]
     print("Ending calculating best move...")
-    return best, h
+    return best

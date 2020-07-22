@@ -53,7 +53,7 @@ import logging
 import random
 import time
 
-SHOW_GUI = True
+SHOW_GUI = False
 
 log_format = '%(asctime)s :: %(funcName)s :: line: %(lineno)d :: %(' \
              'levelname)s :: %(message)s'
@@ -235,17 +235,17 @@ d = {
     "c":2,
     "d":3,
     "e":4,
-    "f": 5,
-    "g": 6,
+    "f":5,
+    "g":6,
     "h":7,
-    "8": 0,
-    "7": 1,
-    "6": 2,
-    "5": 3,
-    "4": 4,
-    "3": 5,
-    "2": 6,
-    "1": 7
+    "8":0,
+    "7":1,
+    "6":2,
+    "5":3,
+    "4":4,
+    "3":5,
+    "2":6,
+    "1":7
 }
 
 class Timer:
@@ -1843,7 +1843,7 @@ class EasyChessGui:
 
             elif not is_human_stm and is_engine_ready: #BLACK
                 condition = "UCT"
-                n = 10  # on fait les n tirages et on apprends au fur et à mesure
+                n = 100  # on fait les n tirages et on apprends au fur et à mesure
                 start = time.time()
                 from UCB import UCB
                 from UCT_IA import BestMoveUCT
@@ -1859,7 +1859,7 @@ class EasyChessGui:
                     n = random.randint(0, len(moves) - 1)
                     best_move = moves[n]
                 elif condition == "UCT":
-                    best_move, h = BestMoveUCT(board, h, hashTable, hashTurn, n)
+                    best_move = BestMoveUCT(board, h, hashTable, hashTurn, n)
                     print("UCT : ", time.time() - start)
                 # Update board with computer move
                 move_str = str(best_move)

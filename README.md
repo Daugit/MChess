@@ -1,6 +1,9 @@
 # Python Easy Chess GUI
 A Chess GUI based from Python using PySimpleGUI and Python-Chess modules. Users can also load a chess engine and play with it. This program is based on a [demo chess against ai](https://github.com/PySimpleGUI/PySimpleGUI/tree/master/Chess) from PySimpleGUI.<br>
 
+We didn't implemented the game motor, neither the UI only the IA.
+
+The game motor and the UI was taken from : https://github.com/fsmosca/Python-Easy-Chess-GUI
 ![](https://i.imgur.com/DT0lOO2.png)
 
 ### A. Requirements

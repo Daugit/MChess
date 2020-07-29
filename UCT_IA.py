@@ -150,6 +150,7 @@ def UCT(board, h, hashTable, hashTurn, Table):
             t[1][best] += 1  # mise à jour à l'indice best, qui est propre au board
             t[2][best] += res
         return res, h
+
     else:  # Sampling step
         add(board, h, Table)
         score_playout, h = playout(board, h, hashTable, hashTurn)

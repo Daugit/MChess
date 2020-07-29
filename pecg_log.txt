@@ -1,2 +1,1 @@
-2020-07-01 17:54:49,447 :: play_game_random :: line: 1845 :: INFO :: Saving game automatically
-2020-07-01 17:55:06,210 :: main_loop :: line: 2164 :: INFO :: Quit app from main loop, X is pressed.
+2020-07-22 08:26:32,448 :: play_game_random :: line: 1941 :: INFO :: Saving game automatically

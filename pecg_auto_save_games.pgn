@@ -238,3 +238,2595 @@
 
 1/2-1/2
 
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.05"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.05"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. f3 Nh6 2. a4 Ng4 3. h3 Ne5 4. Kf2 f6 5. g3 b5 6. Na3 Na6 7. Nb1 f5 8. b4 Rb8 9. axb5 h5 10. Ra2 g6 11. b6 Nxf3 12. c3 Nc5 13. Kxf3 Nb7 14. Bb2 d5 15. Ke3 Nc5 16. b7 Kd7 17. bxc5 Rxb7 18. Qc1 d4+ 19. Kxd4 Rb6 20. Qd1 Re6 21. Bc1 h4 22. Rh2 hxg3 23. Qe1 Kc6+ 24. Kc4 Rg8 25. Na3 Rxe2 26. Bb2 Bh6 27. Nxe2 Be3 28. Qc1 Qxd2 29. Qb1 g2 30. Nc2 Qd7 31. Bc1 Bg5 32. Rh1 Qd1 33. Rxa7 Kd7 34. Ra6 gxh1=N 35. Ncd4 Qxf1 36. Nf3 Bxa6+ 37. Qb5+ Kc8 38. Ng1 Re8 39. Nf3 Qxh3 40. Bd2 Qf1 41. Be3 Rg8 42. Bd4 Bc1 43. Kd3 Qg1 44. Nxc1 Qg4 45. Qc4 Qh4 46. Ne5 Ng3 47. Qxa6+ Kd8 48. Qc6 e6 49. Qa4 Rg7 50. Ng4 Qxg4 51. Bf6+ Kc8 52. Na2 Qc4+ 53. Ke3 Qb5 54. Qc2 Qb4 55. c4 Nh1 56. Qh2 Qd2+ 57. Kf3 Ng3 58. Bxg7 e5 59. Qh8+ Kb7 60. Qf8 Qb2 61. Qd6 g5 62. Bf8 Nh5 63. Qd1 Qxa2 64. Qc2 g4+ 65. Ke3 c6 66. Kd3 Qxc2+ 67. Ke3 Kb8 68. Bg7 Qb2 69. Kd3 Qb5 70. Kc2 Nxg7 71. Kd3 Kc7 72. cxb5 g3 73. Ke2 e4 74. bxc6 g2 75. Kd1 f4 76. Ke1 e3 77. Kd1 Ne6 78. Ke1 Kb8 79. Ke2 g1=B 80. Kd3 e2 81. Kd2 Ng5 82. Ke1 Bxc5 83. Kd2 Ba3 84. Kc3 Ne6 85. Kd2 Bb4+ 86. Kc2 Bf8 87. Kd3 e1=Q 88. Kc2 Ng7 89. Kd3 Bc5 90. Kc4 Bf8 91. Kb5 Bd6 92. Kc4 Qf1+ 93. Kd5 Bc5 94. c7+ Kb7 95. Ke4 Qh1+ 96. Kd3 Kxc7 97. Kc4 Qb7 98. Kc3 Qb8 99. Kc2 Ba7 100. Kd3 Qe8 101. Kc2 Qa4+ 102. Kb2 Kb7 103. Kb1 Qa3 104. Kc2 Qa6 105. Kc1 Kb6 106. Kb1 Qc4 107. Kb2 Bb8 108. Ka1 Qc7 109. Kb2 Qd6 110. Kc1 Ne6 111. Kc2 Qe7 112. Kb3 Qe8 113. Kb2 Bd6 114. Kb1 Qg6+ 115. Ka1 Bc7 116. Kb2 Qd3 117. Ka1 Kc5 118. Kb2 Kc4 119. Ka2 Qf5 120. Ka1 Kd4 121. Kb2 Kc5 122. Kc1 Ng7 123. Kd1 Qc2+ 124. Kxc2 Kd4 125. Kd1 Nh5 126. Kc2 Kc5 127. Kc1 Kb6 128. Kd1 Bb8 129. Ke1 Kc5 130. Kf2 Bd6 131. Kg1 Nf6 132. Kh2 Bc7 133. Kg1 Nd5 134. Kh2 Kd6 135. Kh1 Ke5 136. Kg2 Ke4 137. Kf1 Ne7 138. Kg2 Ke5 139. Kh3 Bd6 140. Kg4 Ke6 141. Kg5 Nf5 142. Kg4 Ng7 143. Kg5 Bb4 144. Kh4 f3 145. Kg5 Kd7 146. Kg4 Kc6 147. Kg3 Nf5+ 148. Kh3 Bd2 149. Kg4 Bg5 150. Kh3 Bh6 151. Kg4 Nd6 152. Kh3 Bg7 153. Kh4 Kc7 154. Kg4 Ba1 155. Kh3 Nb5 156. Kg3 Na7 157. Kf4 f2 158. Ke4 Kc8 159. Kd5 Bb2 160. Ke6 Bc1 161. Kf5 f1=B 162. Kg6 Bg2 163. Kh5 Bh1 164. Kg6 Bg2 165. Kg7 Kc7 166. Kf6 Bh1 167. Ke5 Nc6+ 168. Ke6 Ba3 169. Kf7 Na5 170. Ke8 Kc6 171. Kf7 Kd7 172. Kg6 Bb7 173. Kf5 Bf8 174. Kf4 Kc6 175. Ke4 Kd7+ 176. Kf4 Bd5 177. Ke5 Ba2 178. Ke4 Kc7 179. Kd3 Bh6 180. Ke2 Kc8 181. Kd3 Bg5 182. Kc2 Kd8 183. Kb2 Bh6 184. Kc2 Bg8 185. Kd3 Nb3 186. Ke2 Bd5 187. Kd3 Bh1 188. Kc4 Be3 189. Kb4 Ba8 190. Ka4 Bc1 191. Kb5 Kd7 192. Ka6 Nc5+ 193. Kb6 Ba3 194. Ka5 Na6 195. Kb6 Bb4 196. Ka7 Kc8 197. Kb6 Bh1 198. Kxa6 Bd2 199. Ka7 Bb7 200. Kb6 Ba5+ 201. Ka7 Bb4 202. Kb6 Bh1 203. Ka7 Bd6 204. Kb6 Bf3 205. Kb5 Kd7 206. Ka4 Kc6 207. Ka5 Be5 208. Ka6 Bg4 209. Ka7 Bc3 210. Ka6 Be5 211. Ka7 Bh2 212. Ka8 Bf5 213. Ka7 Kc7 214. Ka8 Bg6 215. Ka7 Kd8 216. Ka6 Ke7 217. Ka7 Bg1+ 218. Kb8 Ke6 219. Ka8 Kf6 220. Kb8 Kf5 221. Kc8 Bh2 222. Kd7 Bh7 223. Kd8 Bg8 224. Ke8 Ke4 225. Kd7 Kf5 226. Ke8 Bg1 227. Kd7 Bd4 228. Ke7 Be3 229. Kd8 Bd4 230. Kd7 Bf6 231. Kd6 Bh7 232. Kd5 Ba1 233. Kc4 Bg6 234. Kd3 Bf6 235. Kd2 Ke6 236. Ke1 Be7 237. Ke2 Bd3+ 238. Kf3 Bd8 239. Ke3 Kd5 240. Kd2 Bc7 241. Ke3 Bc4 242. Kd2 Bd6 243. Kc1 Bf1 244. Kd2 Bh2 245. Kc3 Bh3 246. Kb3 Ke4 247. Kb4 Kd4 248. Kb3 1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.18"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. b3 Nf6 2. b4 Nc6 3. c4 Rb8 4. e4 Ra8 5. Ne2 Rb8 6. f3 Ra8 7. c5 Rb8 8. h4 Ra8 9. b5 Rb8 10. Rh3 Ra8 11. e5 Rb8 12. exf6 Ra8 13. fxe7 Bxe7 14. g4 Rf8 15. Ng3 Rg8 16. Nh1 Rf8 17. Be2 Rg8 18. Rh2 Rf8 19. Rf2 Rg8 20. Rg2 Rf8 21. Bf1 Rg8 22. d4 Rf8 23. Bh6 Rg8 24. Rh2 Rf8 25. Rh3 Rg8 26. Nc3 Rf8 27. Ne2 Rg8 28. Bg5 Rf8 29. Rb1 Rg8 30. Bg2 Rf8 31. Qd2 Rg8 32. Qc2 Rf8 33. Bh6 Rg8 34. Rb4 Rf8 35. Rb1 Rg8 36. Bxg7 Rf8 37. g5 Rg8 38. Qc1 Rf8 39. Rh2 Rg8 40. Qc2 Rf8 41. Bh3 Rg8 42. Qd2 Rf8 43. Nf4 Rg8 44. Ra1 Rf8 45. Bg2 Rg8 46. Bh8 Rf8 47. Kf2 Rg8 48. Ke1 Rf8 49. Bf1 Rg8 1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. d4 Nf6 2. Na3 Nc6 3. Qd3 Rb8 4. Qd1 Ra8 5. Nb1 Rb8 6. b4 Ra8 7. Nd2 Rb8 8. g3 Ra8 9. Ngf3 Rb8 10. d5 Ra8 11. a3 Rb8 12. Rg1 Ra8 13. Rb1 Rb8 14. Nb3 Ra8 15. c3 Rb8 16. Bh3 Ra8 17. Rf1 Rb8 18. Qd4 Ra8 19. e3 Rb8 20. Na5 Ra8 21. Bd2 Rb8 22. Qxf6 Ra8 23. c4 Rb8 24. Ng5 Ra8 25. Nxf7 Rb8 26. Qg6 Ra8 27. Qh5 Rb8 28. Ne5+ g6 29. Kd1 Bg7 30. Ra1 Rf8 31. Ke1 Rg8 32. Bc1 Rf8 33. Bg4 Rg8 34. Naxc6 Rf8 35. f3 Rg8 36. Bxd7+ Qxd7 37. g4 Rf8 38. Nxg6 Rg8 39. Nxb8 Rf8 40. Qxh7 Rg8 41. Nf8 Rxf8 42. Qe4 Rg8 43. Na6 Rf8 44. Bd2 Rg8 45. b5 Rf8 46. Qh7 Rg8 47. Nb8 Rf8 48. a4 Rg8 49. Nc6 Rf8 50. Rd1 Rg8 51. Ra1 Rf8 52. c5 Rg8 53. Na5 Rf8 54. Qxg7 Rg8 55. f4 Rf8 56. Ra3 Rg8 57. Qg6+ Kd8 58. Nb3 Rf8 59. g5 Rg8 60. b6 Rf8 61. Qb1 Rg8 62. bxc7+ Kxc7 63. Rh1 Rf8 64. Qc1 Rg8 65. f5 Rf8 66. e4 Rg8 67. a5 Rf8 68. Qc2 Rg8 69. Kd1 Rf8 70. d6+ Qxd6 71. Nd4 Rg8 72. Rc3 Rf8 73. Qc1 Rg8 74. Rd3 Rf8 75. Rf1 Rg8 76. h4 Rf8 77. Rc3 Rg8 78. Rc2 Rf8 79. Qa1 Rg8 80. Ke1 Rf8 81. a6 Rg8 82. Qa2 Rf8 83. Rc3 Rg8 84. Rc2 Rf8 85. Rg1 Rg8 1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. Nf3 Nf6 2. Ne5 Nc6 3. Nxf7 Kxf7 4. Na3 Qe8 5. b4 Qd8 6. h3 Qe8 7. d3 Qd8 8. e3 Qe8 9. g4 Qd8 10. h4 Qe8 11. Qe2 Qd8 12. h5 Qe8 13. Rb1 Qd8 14. Ra1 Qe8 15. Kd2 Qd8 16. Nb1 Qe8 17. Rh2 Qd8 18. Rh1 Qe8 19. b5 Qd8 20. b6 Qe8 21. Rg1 Qd8 22. Qe1 Qe8 23. Rg2 Qd8 24. Na3 Qe8 25. f4 Qd8 26. bxa7 Qe8 27. Re2 Qd8 28. Rf2 Qe8 29. Kc3 Qd8 30. Qd1 Qe8 31. Rd2 Qd8 32. f5 Qe8 33. Nc4 Qd8 34. Rh2 Qe8 35. Qf3 Qd8 36. Qh1 Qe8 37. Qd5+ e6 38. Qd6 Be7 39. Qb4 Rf8 40. Qb3 Rg8 41. Qxb7 Rf8 42. h6 Rg8 43. Rf2 Rf8 44. Na3 Rg8 45. Bh3 Rf8 46. fxe6+ Kg6 47. Kb3 Rg8 48. Rf1 Rf8 49. Rxf6+ gxf6 50. e4 Rg8 51. Be3 Rf8 52. Rb1 Rg8 53. Bg1 Rf8 54. Qb6 Rg8 55. Bf1 Rf8 56. Qb4 Rg8 57. Kb2 Rf8 58. Nb5 Rg8 59. Na3 Rf8 60. Kc3 Rg8 1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.19"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. Nf3 Nf6 2. h3 Nc6 3. Ng5 Rb8 4. f4 Ra8 5. b3 Rb8 6. Kf2 Ra8 7. Ke3 Rb8 8. g4 Ra8 9. f5 Rb8 10. h4 Ra8 11. Kd3 Rb8 12. Nf3 Ra8 13. Bg2 Rb8 14. Ne5 Ra8 15. Bf1 Rb8 16. e3 Ra8 17. Nf3 Rb8 18. Qe1 Ra8 19. b4 Rb8 20. b5 Ra8 21. Kc4 Rb8 22. d3 Ra8 23. bxc6 Rb8 24. Kc3 Ra8 25. Qd1 Rb8 26. Bh3 Ra8 27. Bb2 Rb8 28. cxd7+ Bxd7 29. Nh2 Qc8 30. Nf1 Kd8 31. d4 Ke8 32. Kd2 Kd8 33. d5 Ke8 34. Ng3 Kd8 35. Bf1 Ke8 36. Rh3 Kd8 37. Nc3 Ke8 38. Nb1 Kd8 39. a4 Ke8 40. a5 Kd8 41. Kd3 Ke8 42. Qe1 Kd8 43. c3 Ke8 44. Kc2 Kd8 45. e4 Ke8 46. Bb5 Kd8 47. Ra4 Ke8 48. Bd3 Kd8 49. Rh2 Ke8 50. Ba3 Kd8 51. Kd2 Ke8 52. Ke3 Kd8 53. Rd4 Ke8 54. Kf4 Kd8 55. Ne2 Ke8 56. Qd2 Kd8 57. a6 Ke8 58. Qa2 Kd8 59. Bc1 Ke8 60. c4 Kd8 61. axb7 Ke8 62. Qa1 Kd8 63. Nd2 Ke8 64. Qb1 Kd8 65. Qb5 Ke8 66. Qb4 Kd8 67. Bc2 Ke8 68. Qa5 Kd8 69. Nf1 Ke8 70. Rh1 Kd8 71. Bd2 Ke8 72. bxc8=B Kd8 73. d6 Ke8 74. Neg3 Kd8 75. Kg5 Ke8 76. Qa3 Kd8 77. Bb1 Ke8 78. e5 Kd8 79. Bc3 Ke8 80. Ba6 Kd8 81. exf6 Ke8 82. Kh5 Kd8 83. Kg5 Ke8 84. Ne3 Kd8 1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. h3 Nf6 2. f3 Nc6 3. e4 Rb8 4. Bc4 Ra8 5. Bb3 Rb8 6. Qe2 Ra8 7. a4 Rb8 8. Kf1 Ra8 9. f4 Rb8 10. h4 Ra8 11. Qf2 Rb8 12. Bd5 Ra8 13. b4 Rb8 14. Qe3 Ra8 15. Qd4 Rb8 16. d3 Ra8 17. Ba2 Rb8 18. e5 Ra8 19. Qe4 Rb8 20. Nh3 Ra8 21. Qd4 Rb8 22. Be3 Ra8 23. Kg1 Rb8 24. Rh2 Ra8 25. e6 Rb8 26. Qe5 Ra8 27. Na3 Rb8 28. Bc1 Ra8 29. Qxc7 Qxc7 30. Bb3 Kd8 31. g3 Ke8 32. Bd5 Kd8 33. Rf2 Ke8 34. exd7+ Kxd7 35. Rd2 Rb8 36. Bb3 Ra8 37. f5 Rb8 38. d4 Ra8 39. d5 Rb8 40. b5 Ra8 41. Rh2 Rb8 42. Bc4 Ra8 43. b6 Rb8 44. a5 Ra8 45. Bb5 Rb8 46. Re2 Ra8 47. Kh2 Rb8 48. Nf2 Ra8 49. Re3 Rb8 50. c4 Ra8 51. c5 Rb8 52. Re6 Ra8 53. Ba4 Rb8 54. Rb1 Ra8 55. Re5 Rb8 56. Bd1 Ra8 57. bxc7 Rb8 58. Kg2 Ra8 59. Re3 Rb8 60. Bg4 Ra8 61. Rxb7 Bxb7 62. Re6 Re8 63. Kh3 Rd8 64. Nc4 Re8 65. Kg2 Rd8 66. dxc6+ Kc8 67. Re2 Re8 68. Rxe7 Bxe7 69. Bd1 Rhf8 70. cxb7+ Kxc7 71. Kf1 Rg8 72. Ne5 Rgf8 73. h5 Rg8 74. Ba4 Rgf8 75. Bb3 Rg8 76. Ba3 Rgf8 77. Nfd3 Rg8 78. Nf3 Rgf8 79. Nb4 Rg8 80. Bc4 Rgf8 81. Ng1 Rg8 82. Ke2 Rgf8 83. Ke1 Rg8 84. Ba6 Rgf8 85. b8=N Rg8 86. Be2 Rgf8 87. Nh3 Rg8 88. Nf4 Rgf8 89. Ba6 Rg8 90. Nbd3 Rgf8 91. Ng6 Rg8 92. h6 Rgf8 93. Kd2 Rg8 94. Bb7 Rgf8 95. Kc2 Rg8 96. Kb1 Rgf8 97. Kb2 Rg8 98. Ba8 Rgf8 99. c6 Rg8 100. Nh4 Rgf8 101. Kc2 Rg8 102. Bxe7 Rgf8 103. Kb1 Rg8 104. Kc2 Rgf8 105. Bb4 Rg8 1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. b4 Nf6 2. g4 Nc6 3. c3 Rb8 4. Bh3 Ra8 5. a3 Rb8 6. f3 Ra8 7. e3 Rb8 8. Kf1 Ra8 9. e4 Rb8 10. Qc2 Ra8 11. Qd1 Rb8 12. Bb2 Ra8 1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. Nc3 Nf6 2. a4 Nc6 3. b4 Rb8 4. Ra3 Ra8 5. Nh3 Rb8 6. f3 Ra8 7. g3 Rb8 8. Nb5 Ra8 9. Nd4 Rb8 10. Nb5 Ra8 11. d4 Rb8 12. Nf2 Ra8 13. Bh3 Rb8 14. f4 Ra8 15. Bf5 Rb8 16. Bg6 Ra8 17. Bxf7+ Kxf7 18. Nxa7 Qe8 19. Ra1 Qd8 20. Bb2 Qe8 21. e4 Qd8 22. d5 Qe8 23. Qb1 Qd8 24. c4 Qe8 25. O-O Qd8 26. h4 Qe8 27. Ra2 Qd8 28. Nd3 Qe8 29. Rc1 Qd8 30. Kh2 Qe8 31. Bc3 Qd8 32. Be1 Qe8 33. Kh1 Qd8 34. f5 Qe8 35. Rg2 Qd8 36. Rf2 Qe8 37. Qc2 Qd8 38. Rh2 Qe8 39. Qa2 Qd8 40. Bc3 Qe8 41. Bxf6 Qd8 42. Ba1 Qe8 43. Bf6 Qd8 44. Qa1 Qe8 1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. f3 Nh6 2. Kf2 Rg8 3. h3 Rh8 4. c3 Rg8 5. Qa4 Rh8 6. Qxa7 Rg8 7. Qe3 Rh8 8. h4 Rg8 9. f4 Rh8 10. b4 Rg8 11. a3 Rh8 12. Kf3 Rg8 13. Ke4 Rh8 14. Qd3 Rg8 15. Kd5 Rh8 16. a4 Rg8 17. Kc4 Rh8 18. Qd4 Rg8 19. Rh2 Rh8 20. a5 Rg8 21. Kd5 Rh8 22. Na3 Rg8 23. Qc4 Rh8 24. h5 Rg8 25. Ke4 Rh8 26. Qa2 Rg8 27. Qb3 Rh8 28. Rh4 Rg8 29. Rh3 Rh8 30. Nf3 Rg8 31. Rg3 Rh8 32. Nh4 Rg8 33. Qe6 Rh8 34. Rg5 Rg8 35. Rf5 Rh8 36. Bb2 Rg8 37. Qxf7+ Nxf7 38. Nb5 Rh8 39. Re5 Rg8 40. Kf5 Rh8 41. Bc1 Rg8 42. a6 Rh8 43. e3 Rg8 44. d4 Rh8 45. Na3 Rg8 46. g3 Rh8 47. Rb1 Rg8 48. Ra5 Rh8 49. Nb5 Rg8 50. Ra3 Rh8 51. Be2 Rg8 52. Na7 Rh8 53. Nc6 Rg8 54. Rba1 Rh8 55. h6 Rg8 56. hxg7 Rh8 57. Bf1 Rg8 58. Nf3 Rh8 59. Kg4 Rg8 60. Bb2 Rh8 61. Nh2 Rg8 62. Rb1 Rh8 63. Bh3 Rg8 64. Rg1 Rh8 65. Rd1 Rg8 66. Kh5 Rh8 67. a7 Rg8 68. Ra5 Rh8 69. Bc1 Rg8 70. Nxd8 Rh8 71. Rd2 Rg8 72. Nxf7 Rh8 73. axb8=B Rg8 74. Rc5 Rh8 75. f5 Rg8 76. Kh6 Rh8 77. gxf8=Q+ Kxf8 78. Rf2 Rg8 79. Ng4 Rh8 80. Rc6 Rg8 81. Nh8 Rxh8 82. Kh5 Rg8 83. Bb2 Rh8 84. Rg6 Rg8 85. Rf6+ Ke8 86. Re2 Rh8 87. Bf1 Rg8 88. Bc1 Rh8 89. Bd2 Rg8 90. Rg2 Rh8 91. c4 Rg8 92. b5 Rh8 93. Bc3 Rg8 94. c5 Rh8 95. Rb6 Rg8 96. Rc6 Rh8 97. Nh2 Rg8 98. Bxc7 Rh8 99. Bf4 Rg8 100. Rd2 Rh8 101. Ba5 Rg8 102. Bh3 Rh8 103. Nf1 Rg8 104. Rxc8+ Kf7 105. Kh4 Rh8 106. Rb2 Rg8 107. Bb4 Rh8 108. Ba5 Rg8 109. Be5 Rh8 1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1. a3 Nh6 2. b4 Rg8 3. f3 Rh8 4. Bb2 Rg8 5. e4 Rh8 6. e5 Rg8 7. Qe2 Rh8 8. Bd4 Rg8 9. Nc3 Rh8 10. Bc5 Rg8 11. Bxe7 Rh8 12. O-O-O Rg8 13. Nb1 Rh8 14. Qb5 Rg8 15. g4 Rh8 16. Qd5 Rg8 17. Qa2 Rh8 18. Bc5 Rg8 19. e6 Rh8 20. Re1 Rg8 21. Qd5 Rh8 22. d4 Rg8 23. Kb2 Rh8 24. Kc1 Rg8 25. Qe5 Rh8 1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1/2-1/2"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1/2-1/2
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.21"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "0-1"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+0-1
+
+[Event "Human vs computer"]
+[Site "?"]
+[Date "2020.07.22"]
+[Round "?"]
+[White "Human"]
+[Black "CDrill 1800"]
+[Result "1-0"]
+[BlackTimeControl "180+2"]
+[WhiteTimeControl "300+10"]
+
+1-0
+

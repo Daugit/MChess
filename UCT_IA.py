@@ -77,7 +77,7 @@ def get_color_code(col):
     return code
 
 
-def update_hashcode(board, h, hashTable, hashTurn, move):
+def update_hashcode(piece, board, h, hashTable, hashTurn, move):
     """
     Update hashcode of a board.
 
@@ -101,19 +101,19 @@ def update_hashcode(board, h, hashTable, hashTurn, move):
     move_color = get_color_code(board.turn)
 
     if col != None:
-        h = h ^ hashTable[col][x2][y2]
+        h = h ^ hashTable[col][x2][y2][piece-1]
 
-    h = h ^ hashTable[move_color][x2][y2]
-    h = h ^ hashTable[move_color][x1][y1]
+    h = h ^ hashTable[move_color][x2][y2][piece-1]
+    h = h ^ hashTable[move_color][x1][y1][piece-1]
     h = h ^ hashTurn
 
     return h
 
 
 def play(board, h, hashTable, hashTurn, best_move):
-    h = update_hashcode(board, h, hashTable, hashTurn, best_move)
+    piece = board.piece_type_at(best_move.from_square)
+    h = update_hashcode(piece, board, h, hashTable, hashTurn, best_move)
     board.push(best_move)
-
     return h
 
 
@@ -144,8 +144,7 @@ def UCT(board, h, hashTable, hashTurn, Table):
 
         res = 0.0
         if len(moves) > 0:
-            h = update_hashcode(board, h, hashTable, hashTurn, moves[best])
-            board.push(moves[best])
+            h = play(board, h, hashTable, hashTurn, moves[best])
             res, h = UCT(board, h, hashTable, hashTurn, Table)
             t[0] += 1
             t[1][best] += 1  # mise à jour à l'indice best, qui est propre au board

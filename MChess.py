@@ -52,6 +52,8 @@ import chess.polyglot
 import logging
 import random
 import time
+import threading
+
 
 SHOW_GUI = False
 
@@ -224,7 +226,10 @@ for k in range (3):
     for i in range (8):
         l1 = []
         for j in range (8):
-            l1.append (random.randint (0, 2 ** 64))
+            l2 =[]
+            for jj in range(6):
+                l2.append(random.randint(0, 2 ** 64))
+            l1.append (l2)
         l.append (l1)
     hashTable.append (l)
 hashTurn = random.randint (0, 2 ** 64)
@@ -1667,17 +1672,18 @@ class EasyChessGui:
             code = 2
         return code
 
-    def update_hashcode(self, board, h, move):
+    def update_hashcode(self,piece, board, h, move):
         """
-        Update hashcode of a board.
+            Update hashcode of a board.
 
-        Need to call this function before using board.push(move).
+            Need to call this function before using board.push(move).
 
-        :param board:
-        :param h:
-        :param move:
-        :return:
-        """
+            :param board:
+            :param h:
+            :param move:
+            :return:
+            """
+
         col = board.color_at(move.to_square)
         col = self.get_color_code(col)
 
@@ -1691,16 +1697,17 @@ class EasyChessGui:
         move_color = self.get_color_code(board.turn)
 
         if col != None:
-            h = h ^ hashTable[col][x2][y2]
+            h = h ^ hashTable[col][x2][y2][piece - 1]
 
-        h = h ^ hashTable[move_color][x2][y2]
-        h = h ^ hashTable[move_color][x1][y1]
+        h = h ^ hashTable[move_color][x2][y2][piece - 1]
+        h = h ^ hashTable[move_color][x1][y1][piece - 1]
         h = h ^ hashTurn
 
         return h
 
     def play(self, board, h, best_move):
-        h = self.update_hashcode(board, h, best_move)
+        piece = board.piece_type_at(best_move.from_square)
+        h = self.update_hashcode(piece, board, h, best_move)
         board.push(best_move)
 
         return h
@@ -1740,7 +1747,6 @@ class EasyChessGui:
 
         # Game loop
         while not board.is_game_over(claim_draw=True):
-            print("TURN :", board.turn)
             if (SHOW_GUI):
                 window.refresh()
 
@@ -1891,7 +1897,6 @@ class EasyChessGui:
                 else:
                     # Place piece in the move to_square
                     self.psg_board[to_row][to_col] = piece
-
                 if (SHOW_GUI):
                     self.redraw_board(window)
 
@@ -3162,7 +3167,6 @@ class EasyChessGui:
 
         window.Close()
 
-
 def main():
     engine_config_file = 'pecg_engines.json'
     user_config_file = 'pecg_user.json'
@@ -3182,7 +3186,6 @@ def main():
                         max_book_ply)
     score = []
     score = pecg.main_loop(score, 30)
-    print(score)
 
     sum_white, sum_black, others = 0, 0, 0
     for i in score:
@@ -3192,8 +3195,34 @@ def main():
             sum_black += 1
         else:
             others += 1
-    print(sum_white, sum_black, others)
+    return sum_white, sum_black, others
+
+
 
 
 if __name__ == "__main__":
     main()
+    # class Slave(threading.Thread):
+    #     def __init__(self):
+    #         super(Slave, self).__init__()
+    #         self.sum_white = 0
+    #         self.sum_black = 0
+    #         self.others = 0
+    #
+    #     def run(self):
+    #         main(self)
+    #
+    # ts = []
+    # for i in range(10):
+    #     t = Slave()  # Instantialize thread
+    #     t.start()  # start thread
+    #     ts.append(t)  # keep track of threads started
+    # # Wait for all threads to finish
+    # for t in ts:
+    #     t.join()
+    # sum_white, sum_black, others = 0, 0, 0
+    # for t in ts:
+    #     sum_white += t.sum_white
+    #     sum_black += t.sum_black
+    #     others += t.others
+    # print(sum_white, sum_black, others)

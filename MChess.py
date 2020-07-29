@@ -1,44 +1,18 @@
 #!/usr/bin/env python3
-""" 
-MChess.py
+"""
+Ce jeu d'échec implémente les méthodes Monte Carlo vues en cours comme IA :
+- UCB
+- UCT
 
-Requirements:
-    Python 3.7.3 and up
+L'interface graphique et le moteur de jeu sont repris du github :
+https://github.com/fsmosca/Python-Easy-Chess-GUI
 
-PySimpleGUI Square Mapping
-board = [
-    56, 57, ... 63
-    ...
-    8, 9, ...
-    0, 1, 2, ...
-]
-
-row = [
-    0, 0, ...
-    1, 1, ...
-    ...
-    7, 7 ...
-]
-
-col = [
-    0, 1, 2, ... 7
-    0, 1, 2, ...
-    ...
-    0, 1, 2, ... 7
-]
-
-
-Python-Chess Square Mapping
-board is the same as in PySimpleGUI
-row is reversed
-col is the same as in PySimpleGUI
-
+Les parties du code que nous avons implémenté sont taggées par '# CUSTOM #' afin de faciliter la recherche de ces bouts de code
 """
 import PySimpleGUI as sg
 import os
 import sys
 import subprocess
-import threading
 from pathlib import Path, PurePath  # Python 3.4 and up
 import queue
 import copy
@@ -54,8 +28,67 @@ import random
 import time
 import threading
 
+######################################
+# CUSTOM # PARAMETERS #
+######################################
+from UCB import UCB
+from UCT_IA import BestMoveUCT
 
+"""
+Si True, affiche le GUI et montre les coups joués par l'IA.
+"""
 SHOW_GUI = False
+
+"""
+Nombre de playouts pour UCT ou UCB
+"""
+NB_PLAYOUT = 100
+
+"""
+Nombre de parties à lancer pour les statistiques de jeu
+"""
+X = 30
+
+"""
+HashTable et HashTurn utilisés pour le hashage des boards.
+"""
+hashTable = []
+for k in range (3):
+    l = []
+    for i in range (8):
+        l1 = []
+        for j in range (8):
+            l2 =[]
+            for jj in range(6): #6 étant le type de pion
+                l2.append(random.randint(0, 2 ** 64))
+            l1.append (l2)
+        l.append (l1)
+    hashTable.append (l)
+hashTurn = random.randint (0, 2 ** 64)
+
+"""
+Dictionnaire pour convertir les coups (a1a2) en positions sur le board ((0,7) --> (0,6))
+"""
+d = {
+    "a":0,
+    "b":1,
+    "c":2,
+    "d":3,
+    "e":4,
+    "f":5,
+    "g":6,
+    "h":7,
+    "8":0,
+    "7":1,
+    "6":2,
+    "5":3,
+    "4":4,
+    "3":5,
+    "2":6,
+    "1":7
+}
+
+######################################
 
 log_format = '%(asctime)s :: %(funcName)s :: line: %(lineno)d :: %(' \
              'levelname)s :: %(message)s'
@@ -219,40 +252,6 @@ menu_def_play = [
     ['&Help', ['About']],
 ]
 
-# IA Parameters
-hashTable = []
-for k in range (3):
-    l = []
-    for i in range (8):
-        l1 = []
-        for j in range (8):
-            l2 =[]
-            for jj in range(6):
-                l2.append(random.randint(0, 2 ** 64))
-            l1.append (l2)
-        l.append (l1)
-    hashTable.append (l)
-hashTurn = random.randint (0, 2 ** 64)
-
-d = {
-    "a":0,
-    "b":1,
-    "c":2,
-    "d":3,
-    "e":4,
-    "f":5,
-    "g":6,
-    "h":7,
-    "8":0,
-    "7":1,
-    "6":2,
-    "5":3,
-    "4":4,
-    "3":5,
-    "2":6,
-    "1":7
-}
-
 class Timer:
     def __init__(self, tc_type='fischer', base=300000, inc=10000,
                  period_moves=40):
@@ -287,366 +286,9 @@ class Timer:
         self.base = max(0, self.base)
         self.elapse = 0
 
-
-class GuiBook:
-    def __init__(self, book_file, board, is_random=True):
-        """
-        Handle gui polyglot book for engine opponent.
-
-        :param book_file: polgylot book filename
-        :param board: given board position
-        :param is_random: randomly select move from book
-        """
-        self.book_file = book_file
-        self.board = board
-        self.is_random = is_random
-        self.__book_move = None
-
-    def get_book_move(self):
-        """ Returns book move either random or best move """
-        reader = chess.polyglot.open_reader(self.book_file)
-        try:
-            if self.is_random:
-                entry = reader.weighted_choice(self.board)
-            else:
-                entry = reader.find(self.board)
-            self.__book_move = entry.move
-        except IndexError:
-            logging.warning('No more book move.')
-        except Exception:
-            logging.exception('Failed to get book move.')
-        finally:
-            reader.close()
-
-        return self.__book_move
-
-    def get_all_moves(self):
-        """
-        Read polyglot book and get all legal moves from a given positions.
-
-        :return: move string
-        """
-        is_found = False
-        total_score = 0
-        book_data = {}
-        cnt = 0
-
-        if os.path.isfile(self.book_file):
-            moves = '{:4s}   {:<5s}   {}\n'.format('move', 'score', 'weight')
-            with chess.polyglot.open_reader(self.book_file) as reader:
-                for entry in reader.find_all(self.board):
-                    is_found = True
-                    san_move = self.board.san(entry.move)
-                    score = entry.weight
-                    total_score += score
-                    bd = {cnt: {'move': san_move, 'score': score}}
-                    book_data.update(bd)
-                    cnt += 1
-        else:
-            moves = '{:4s}  {:<}\n'.format('move', 'score')
-
-        # Get weight for each move
-        if is_found:
-            for _, v in book_data.items():
-                move = v['move']
-                score = v['score']
-                weight = score / total_score
-                moves += '{:4s}   {:<5d}   {:<2.1f}%\n'.format(move, score,
-                                                               100 * weight)
-
-        return moves, is_found
-
-
-class RunEngine(threading.Thread):
-    pv_length = 9
-    move_delay_sec = 3.0
-
-    def __init__(self, eng_queue, engine_config_file, engine_path_and_file,
-                 engine_id_name, max_depth=MAX_DEPTH,
-                 base_ms=300000, inc_ms=1000, tc_type='fischer',
-                 period_moves=0, is_stream_search_info=True):
-        """
-        Run engine as opponent or as adviser.
-
-        :param eng_queue:
-        :param engine_config_file: pecg_engines.json
-        :param engine_path_and_file:
-        :param engine_id_name:
-        :param max_depth:
-        """
-        threading.Thread.__init__(self)
-        self._kill = threading.Event()
-        self.engine_config_file = engine_config_file
-        self.engine_path_and_file = engine_path_and_file
-        self.engine_id_name = engine_id_name
-        self.own_book = False
-        self.bm = None
-        self.pv = None
-        self.score = None
-        self.depth = None
-        self.time = None
-        self.nps = 0
-        self.max_depth = max_depth
-        self.eng_queue = eng_queue
-        self.engine = None
-        self.board = None
-        self.analysis = is_stream_search_info
-        self.is_nomove_number_in_variation = True
-        self.base_ms = base_ms
-        self.inc_ms = inc_ms
-        self.tc_type = tc_type
-        self.period_moves = period_moves
-        self.is_ownbook = False
-        self.is_move_delay = True
-
-    def stop(self):
-        """ Interrupt engine search """
-        self._kill.set()
-
-    def get_board(self, board):
-        """ Get the current board position """
-        self.board = board
-
-    def configure_engine(self):
-        """ Read the engine config file pecg_engines.json and set the engine to
-        use the user_value of the value key. Our option name has 2 values,
-        default_value and user_value.
-
-        Example for hash option
-        'name': Hash
-        'default': default_value
-        'value': user_value
-
-        If default_value and user_value are not the same, we will set the
-        engine to use the user_value by the command,
-        setoption name Hash value user_value
-
-        However if default_value and user_value are the same, we will not send
-        commands to set the option value because the value is default already.
-        """
-        with open(self.engine_config_file, 'r') as json_file:
-            data = json.load(json_file)
-            for p in data:
-                if p['name'] == self.engine_id_name:
-                    for n in p['options']:
-
-                        if n['name'].lower() == 'ownbook':
-                            self.is_ownbook = True
-
-                        # Ignore button type for a moment.
-                        if n['type'] == 'button':
-                            continue
-
-                        if n['type'] == 'spin':
-                            user_value = int(n['value'])
-                            default_value = int(n['default'])
-                        else:
-                            user_value = n['value']
-                            default_value = n['default']
-
-                        if user_value != default_value:
-                            try:
-                                self.engine.configure({n['name']: user_value})
-                                logging.info('Set {} to {}'.format(
-                                    n['name'], user_value))
-                            except Exception:
-                                logging.exception('{Failed to configure '
-                                                  'engine}')
-
-    def run(self):
-        """
-        Run engine to get search info and bestmove. If there is error we
-        still send bestmove None.
-
-        :return: bestmove thru que
-        """
-        folder = Path(self.engine_path_and_file)
-        folder = folder.parents[0]
-
-        try:
-            if platform == 'win32':
-                self.engine = chess.engine.SimpleEngine.popen_uci(
-                    self.engine_path_and_file, cwd=folder,
-                    creationflags=subprocess.CREATE_NO_WINDOW)
-            else:
-                self.engine = chess.engine.SimpleEngine.popen_uci(
-                    self.engine_path_and_file, cwd=folder)
-        except chess.engine.EngineTerminatedError:
-            logging.warning('Failed to start {}.'.format(self.engine_path_and_file))
-            self.eng_queue.put('bestmove {}'.format(self.bm))
-            return
-        except Exception:
-            logging.exception('Failed to start {}.'.format(
-                self.engine_path_and_file))
-            self.eng_queue.put('bestmove {}'.format(self.bm))
-            return
-
-        # Set engine option values
-        try:
-            self.configure_engine()
-        except Exception:
-            logging.exception('Failed to configure engine.')
-
-        # Set search limits
-        if self.tc_type == 'delay':
-            limit = chess.engine.Limit(
-                depth=self.max_depth if self.max_depth != MAX_DEPTH else None,
-                white_clock=self.base_ms / 1000,
-                black_clock=self.base_ms / 1000,
-                white_inc=self.inc_ms / 1000,
-                black_inc=self.inc_ms / 1000)
-        elif self.tc_type == 'timepermove':
-            limit = chess.engine.Limit(time=self.base_ms / 1000,
-                                       depth=self.max_depth if
-                                       self.max_depth != MAX_DEPTH else None)
-        else:
-            limit = chess.engine.Limit(
-                depth=self.max_depth if self.max_depth != MAX_DEPTH else None,
-                white_clock=self.base_ms / 1000,
-                black_clock=self.base_ms / 1000,
-                white_inc=self.inc_ms / 1000,
-                black_inc=self.inc_ms / 1000)
-        start_time = time.perf_counter()
-        if self.analysis:
-            is_time_check = False
-
-            with self.engine.analysis(self.board, limit) as analysis:
-                for info in analysis:
-
-                    if self._kill.wait(0.1):
-                        break
-
-                    try:
-                        if 'depth' in info:
-                            self.depth = int(info['depth'])
-
-                        if 'score' in info:
-                            self.score = int(info['score'].relative.score(
-                                mate_score=32000)) / 100
-
-                        self.time = info['time'] if 'time' in info \
-                            else time.perf_counter() - start_time
-
-                        if 'pv' in info and not ('upperbound' in info or
-                                                 'lowerbound' in info):
-                            self.pv = info['pv'][0:self.pv_length]
-
-                            if self.is_nomove_number_in_variation:
-                                spv = self.short_variation_san()
-                                self.pv = spv
-                            else:
-                                self.pv = self.board.variation_san(self.pv)
-
-                            self.eng_queue.put('{} pv'.format(self.pv))
-                            self.bm = info['pv'][0]
-
-                        # score, depth, time, pv
-                        if self.score is not None and \
-                                self.pv is not None and self.depth is not None:
-                            info_to_send = '{:+5.2f} | {} | {:0.1f}s | {} info_all'.format(
-                                self.score, self.depth, self.time, self.pv)
-                            self.eng_queue.put('{}'.format(info_to_send))
-
-                        # Send stop if movetime is exceeded
-                        if not is_time_check and self.tc_type != 'fischer' \
-                                and self.tc_type != 'delay' and \
-                                time.perf_counter() - start_time >= \
-                                self.base_ms / 1000:
-                            logging.info('Max time limit is reached.')
-                            is_time_check = True
-                            break
-
-                        # Send stop if max depth is exceeded
-                        if 'depth' in info:
-                            if int(info['depth']) >= self.max_depth \
-                                    and self.max_depth != MAX_DEPTH:
-                                logging.info('Max depth limit is reached.')
-                                break
-                    except Exception:
-                        logging.exception('Failed to parse search info.')
-        else:
-            result = self.engine.play(self.board, limit, info=chess.engine.INFO_ALL)
-            logging.info('result: {}'.format(result))
-            try:
-                self.depth = result.info['depth']
-            except KeyError:
-                self.depth = 1
-                logging.exception('depth is missing.')
-            try:
-                self.score = int(result.info['score'].relative.score(
-                    mate_score=32000)) / 100
-            except KeyError:
-                self.score = 0
-                logging.exception('score is missing.')
-            try:
-                self.time = result.info['time'] if 'time' in result.info \
-                    else time.perf_counter() - start_time
-            except KeyError:
-                self.time = 0
-                logging.exception('time is missing.')
-            try:
-                if 'pv' in result.info:
-                    self.pv = result.info['pv'][0:self.pv_length]
-
-                if self.is_nomove_number_in_variation:
-                    spv = self.short_variation_san()
-                    self.pv = spv
-                else:
-                    self.pv = self.board.variation_san(self.pv)
-            except Exception:
-                self.pv = None
-                logging.exception('pv is missing.')
-
-            if self.pv is not None:
-                info_to_send = '{:+5.2f} | {} | {:0.1f}s | {} info_all'.format(
-                    self.score, self.depth, self.time, self.pv)
-                self.eng_queue.put('{}'.format(info_to_send))
-            self.bm = result.move
-
-        # Apply engine move delay if movetime is small
-        if self.is_move_delay:
-            while True:
-                if time.perf_counter() - start_time >= self.move_delay_sec:
-                    break
-                logging.info('Delay sending of best move {}'.format(self.bm))
-                time.sleep(1.0)
-
-        # If bm is None, we will use engine.play()
-        if self.bm is None:
-            logging.info('bm is none, we will try engine,play().')
-            try:
-                result = self.engine.play(self.board, limit)
-                self.bm = result.move
-            except Exception:
-                logging.exception('Failed to get engine bestmove.')
-        self.eng_queue.put('bestmove {}'.format(self.bm))
-        logging.info('bestmove {}'.format(self.bm))
-
-    def quit_engine(self):
-        """ Quit engine """
-        logging.info('quit engine')
-        try:
-            self.engine.quit()
-        except AttributeError:
-            logging.info('AttributeError, self.engine is already None')
-        except Exception:
-            logging.exception('Failed to quit engine.')
-
-    def short_variation_san(self):
-        """ Returns variation in san but without move numbers """
-        if self.pv is None:
-            return None
-
-        short_san_pv = []
-        tmp_board = self.board.copy()
-        for pc_move in self.pv:
-            san_move = tmp_board.san(pc_move)
-            short_san_pv.append(san_move)
-            tmp_board.push(pc_move)
-
-        return ' '.join(short_san_pv)
-
-
+"""
+Classe du jeu d'échec
+"""
 class EasyChessGui:
     queue = queue.Queue()
     is_user_white = True  # White is at the bottom in board layout
@@ -1660,17 +1302,9 @@ class EasyChessGui:
 
         return timer
 
-    #### CUSTOM
-
-    def get_color_code(self, col):
-
-        if (col == None):
-            code = 0
-        elif (col):
-            code = 1
-        else:
-            code = 2
-        return code
+    #############################
+    # CUSTOM # FONCTIONS POUR GERER LE HASHCODE DU BOARD DANS UCT
+    #############################
 
     def update_hashcode(self,piece, board, h, move):
         """
@@ -1712,14 +1346,25 @@ class EasyChessGui:
 
         return h
 
-    def play_game_random(self, window, engine_id_name, board):
+    def get_color_code(self, col):
         """
-        User can play a game against and engine.
+        :param col: couleur du pion sur la case, None étant une case vide
+        :return: encodage de la couleur (0, 1 ou 2)
+        """
+        if (col == None):
+            code = 0
+        elif (col):
+            code = 1
+        else:
+            code = 2
+        return code
 
-        :param window:
-        :param engine_id_name:
-        :param board: current board position
-        :return:
+    #############################
+
+
+    def play_game_random(self, window, engine_id_name, board, condition2, condition1):
+        """
+        User can play a game against an IA or watch IA play between them.
         """
         window.FindElement('_movelist_').Update(disabled=False)
         window.FindElement('_movelist_').Update('', disabled=True)
@@ -1728,8 +1373,6 @@ class EasyChessGui:
 
         is_new_game, is_exit_game, is_exit_app = False, False, False
 
-        is_engine_ready = True
-
         # For saving game
         move_cnt = 0
 
@@ -1737,8 +1380,12 @@ class EasyChessGui:
         is_user_wins = False
         is_user_draws = False
 
-        # Board hashcode init
+        #############################
+        # CUSTOM #
+        # Initialisation du hashcode du board à 0 en début de partie, pour UCT
+        #############################
         h = 0
+        #############################
 
         if (SHOW_GUI):
             # Init timer
@@ -1750,21 +1397,33 @@ class EasyChessGui:
             if (SHOW_GUI):
                 window.refresh()
 
-            # Joueur 1
 
-            #######CUSTOM
+            # JOUEUR 1
 
-            if is_human_stm:  # WHITE:
-                condition = "Random"
+            if is_human_stm:  # IF WHITE PLAYS
 
-                if condition == "Random":
+                #############################
+                # CUSTOM #
+                # On a modifié la partie où le joueur blanc sélectionne son meilleur coup
+                # pour pouvoir choisir entre joueur humain et IA (Uniforme, UCB, UCT)
+                #############################
+
+                """
+                condition1 est le type d'IA choisi pour le joueur 1
+                """
+                condition = condition1
+
+                if condition == "UNIFORM":
                     is_promote = False
-                    best_move = None
-                    is_book_from_gui = True
-
                     moves = [i for i in board.legal_moves]
-                    n = random.randint(0, len(moves) - 1)
-                    best_move = moves[n]
+                    rand = random.randint(0, len(moves) - 1)
+                    best_move = moves[rand]
+                elif condition == "UCB":
+                    best_move = UCB(board, NB_PLAYOUT)
+                elif condition == "UCT":
+                    best_move = BestMoveUCT(board, h, hashTable, hashTurn, NB_PLAYOUT)
+
+                ####################################
 
                 # Update board with computer move
                 move_str = str(best_move)
@@ -1799,8 +1458,14 @@ class EasyChessGui:
                 if (SHOW_GUI):
                     self.redraw_board(window)
 
+                #############################
+                # CUSTOM #
+                # play() permet de jouer le best move et de modifier le hashcode du board (h).
+                # Dans le cas de Uniform ou UCB, le hash n'est pas utilisé.
+                #############################
                 h = self.play(board, h, best_move)
-                #board.push(best_move)
+                #############################
+
                 move_cnt += 1
 
                 if (SHOW_GUI):
@@ -1820,8 +1485,7 @@ class EasyChessGui:
                     self.change_square_color(window, fr_row, fr_col)
                     self.change_square_color(window, to_row, to_col)
 
-                is_human_stm = not is_human_stm
-                # Engine has done its move
+                is_human_stm = not is_human_stm #change player
 
                 k1 = 'b_elapse_k'
                 k2 = 'b_base_time_k'
@@ -1839,34 +1503,36 @@ class EasyChessGui:
                     window.Element(k2).Update(elapse_str)
 
                     window.FindElement('_gamestatus_').Update('Mode     Play')
-                time.sleep(0)
 
-            # Joueur 2
+            # JOUEUR 2
 
+            elif not is_human_stm : #BLACK PLAYS
 
-            ##### CUSTOM
+                #############################
+                # CUSTOM #
+                # On a modifié la partie où le joueur noir sélectionne son meilleur coup
+                # selon une IA (Uniforme, UCB, UCT) choisie.
+                #############################
 
-
-            elif not is_human_stm and is_engine_ready: #BLACK
-                condition = "UCT"
-                n = 100  # on fait les n tirages et on apprends au fur et à mesure
-                start = time.time()
-                from UCB import UCB
-                from UCT_IA import BestMoveUCT
+                """
+                condition2 est le type d'IA choisi pour le joueur 2
+                """
+                condition = condition2
 
                 if condition == "UCB":
-                    best_move = UCB(board, n)
-                    print("UCB : ",time.time() - start)
+                    best_move = UCB(board, NB_PLAYOUT)
 
-                elif condition == "Uniform":
+                elif condition == "UNIFORM":
                     is_promote = False
-
                     moves = [i for i in board.legal_moves]
-                    n = random.randint(0, len(moves) - 1)
-                    best_move = moves[n]
+                    rand = random.randint(0, len(moves) - 1)
+                    best_move = moves[rand]
+
                 elif condition == "UCT":
-                    best_move = BestMoveUCT(board, h, hashTable, hashTurn, n)
-                    print("UCT : ", time.time() - start)
+                    best_move = BestMoveUCT(board, h, hashTable, hashTurn, NB_PLAYOUT)
+
+                ###################################
+
                 # Update board with computer move
                 move_str = str(best_move)
                 fr_col = ord(move_str[0]) - ord('a')
@@ -1900,8 +1566,14 @@ class EasyChessGui:
                 if (SHOW_GUI):
                     self.redraw_board(window)
 
+                #############################
+                # CUSTOM #
+                # play() permet de jouer le best move et de modifier le hashcode du board (h).
+                # Dans le cas de Uniform ou UCB, le hash n'est pas utilisé.
+                #############################
                 h = self.play(board, h, best_move)
-                #board.push(best_move)
+                #############################
+
                 move_cnt += 1
 
                 if (SHOW_GUI):
@@ -1921,8 +1593,7 @@ class EasyChessGui:
                     self.change_square_color(window, fr_row, fr_col)
                     self.change_square_color(window, to_row, to_col)
 
-                is_human_stm = not is_human_stm
-                # Engine has done its move
+                is_human_stm = not is_human_stm #Changement de joueur
 
                 k1 = 'b_elapse_k'
                 k2 = 'b_base_time_k'
@@ -1940,7 +1611,6 @@ class EasyChessGui:
                     window.Element(k2).Update(elapse_str)
 
                     window.FindElement('_gamestatus_').Update('Mode     Play')
-                time.sleep(0)
 
         # Auto-save game
         logging.info('Saving game automatically')
@@ -1988,11 +1658,22 @@ class EasyChessGui:
                 self.game.headers['WhiteTimeControl'] = str(1) + '/' + str(base_e)
         self.save_game()
         self.halfmove_clock = 1
+
+        #############################
+        # CUSTOM #
+        # Ecrit les résultats dans un fichier Results.txt
+        #############################
+
         if board.is_game_over(claim_draw=True):
             print("Résultat: ",board.result())
+            file1 = open("Results.txt", "a")
+            file1.write(condition1 + " VS " + condition2 + " : " + board.result())
+            file1.close()
 
             if(SHOW_GUI):
                 sg.Popup('Game is over.', title=BOX_TITLE, icon=ico_path[platform]['pecg'])
+
+        #############################
 
         if is_exit_app:
             window.Close()
@@ -2162,7 +1843,7 @@ class EasyChessGui:
 
         return engine_id_name
 
-    def main_loop(self, score, limite):
+    def main_loop(self, score, limite, condition2, condition1):
         """
         Build GUI, read user and engine config files and take user inputs.
 
@@ -3119,7 +2800,10 @@ class EasyChessGui:
                 sg.PopupScrolled(HELP_MSG, title='Help/About')
                 continue
 
-            # Mode: Neutral
+            #############################
+            # CUSTOM #
+            # On choisit automatiquement le mode PLAY
+            #############################
             button = 'Play'
             if button == 'Play':
                 if engine_id_name is None:
@@ -3140,7 +2824,10 @@ class EasyChessGui:
                     window.FindElement('_movelist_').Update(disabled=False)
                     window.FindElement('_movelist_').Update('', disabled=True)
 
-                    state = self.play_game_random(window, engine_id_name, board)
+                    #############################
+                    # CUSTOM # Lance le jeu entre 'condition1' et 'condition2'
+                    #############################
+                    state = self.play_game_random(window, engine_id_name, board, condition2, condition1)
                     start_new_game = state[0]
                     if(not SHOW_GUI):
                         start_new_game = True
@@ -3155,6 +2842,8 @@ class EasyChessGui:
                     board = chess.Board()
                     self.set_new_game()
 
+                    #############################
+
                     if not start_new_game:
                         break
 
@@ -3167,7 +2856,11 @@ class EasyChessGui:
 
         window.Close()
 
-def main():
+def main(condition2, condition1):
+    """
+    condition1 correspond au joueur blanc (Uniform, UCB, UCT)
+    condition2 correspond au joueur noir (Uniform, UCB, UCT)
+    """
     engine_config_file = 'pecg_engines.json'
     user_config_file = 'pecg_user.json'
 
@@ -3184,9 +2877,14 @@ def main():
                         pecg_book, book_from_computer_games,
                         book_from_human_games, is_use_gui_book, is_random_book,
                         max_book_ply)
-    score = []
-    score = pecg.main_loop(score, 30)
 
+    ###############################
+    # CUSTOM # Stocke les scores des X parties
+    ###############################
+
+    score = []
+    score = pecg.main_loop(score, X, condition2, condition1)
+    print(score)
     sum_white, sum_black, others = 0, 0, 0
     for i in score:
         if i == "1-0":
@@ -3198,31 +2896,10 @@ def main():
     return sum_white, sum_black, others
 
 
-
-
 if __name__ == "__main__":
-    main()
-    # class Slave(threading.Thread):
-    #     def __init__(self):
-    #         super(Slave, self).__init__()
-    #         self.sum_white = 0
-    #         self.sum_black = 0
-    #         self.others = 0
-    #
-    #     def run(self):
-    #         main(self)
-    #
-    # ts = []
-    # for i in range(10):
-    #     t = Slave()  # Instantialize thread
-    #     t.start()  # start thread
-    #     ts.append(t)  # keep track of threads started
-    # # Wait for all threads to finish
-    # for t in ts:
-    #     t.join()
-    # sum_white, sum_black, others = 0, 0, 0
-    # for t in ts:
-    #     sum_white += t.sum_white
-    #     sum_black += t.sum_black
-    #     others += t.others
-    # print(sum_white, sum_black, others)
+    start = time.time()
+    print("Joueur 2 : UCT", "Joueur 1 : UNIFORM")
+    condition2, condition1 = "UCT", "UNIFORM"
+
+    print(main(condition2, condition1))
+    print((time.time() - start)//60)

@@ -19,3 +19,5 @@ Engines/*
 # Ignore text files, except README.txt
 *.txt
 !README.md
+/pecg_engines.json
+/pecg_user.json

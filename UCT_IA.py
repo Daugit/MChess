@@ -150,7 +150,6 @@ def UCT(board, h, hashTable, hashTurn, Table):
             t[1][best] += 1  # mise à jour à l'indice best, qui est propre au board
             t[2][best] += res
         return res, h
-
     else:  # Sampling step
         add(board, h, Table)
         score_playout, h = playout(board, h, hashTable, hashTurn)
@@ -158,7 +157,6 @@ def UCT(board, h, hashTable, hashTurn, Table):
 
 
 def BestMoveUCT(board, h, hashTable, hashTurn, nb_playout):
-    print("Starting calculating best move...")
     Table = {}
 
     for i in range(nb_playout):  # on met à jour la table de transposition avec les stats par coup legal
@@ -166,6 +164,7 @@ def BestMoveUCT(board, h, hashTable, hashTurn, nb_playout):
         h1 = h
         UCT(b1, h1, hashTable, hashTurn, Table)
     t = look(h, Table)
+
     moves = [i for i in board.legal_moves]
     best = moves[0]
     bestValue = t[1][0]
@@ -173,5 +172,4 @@ def BestMoveUCT(board, h, hashTable, hashTurn, nb_playout):
         if (t[1][i] > bestValue):
             bestValue = t[1][i]
             best = moves[i]
-    print("Ending calculating best move...")
     return best

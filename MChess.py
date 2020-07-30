@@ -35,21 +35,6 @@ from UCB import UCB
 from UCT_IA import BestMoveUCT
 
 """
-Si True, affiche le GUI et montre les coups joués par l'IA.
-"""
-SHOW_GUI = False
-
-"""
-Nombre de playouts pour UCT ou UCB
-"""
-NB_PLAYOUT = 100
-
-"""
-Nombre de parties à lancer pour les statistiques de jeu
-"""
-X = 30
-
-"""
 HashTable et HashTurn utilisés pour le hashage des boards.
 """
 hashTable = []
@@ -87,6 +72,11 @@ d = {
     "2":6,
     "1":7
 }
+
+"""
+Zobrist Hash
+"""
+piece_hash = [[[random.randint(0, 2 ** 64) for _ in range(8)] for _ in range(8)] for _ in range(12)]
 
 ######################################
 
@@ -1339,9 +1329,46 @@ class EasyChessGui:
 
         return h
 
+    def update_hashcode_zobriest(self,piece, board, h, move):
+        """
+            Update hashcode of a board with Zobriest Hashing
+
+            Need to call this function before using board.push(move).
+
+            :param board:
+            :param h:
+            :param move:
+            :return:
+            """
+
+        to_col = board.color_at(move.to_square)
+        to_col = self.get_color_code(to_col)
+        to_piece = board.piece_type_at(move.to_square)
+
+        from_uci = chess.square_name(move.from_square)
+        x1 = d[from_uci[0]]
+        y1 = d[from_uci[1]]
+        to_uci = chess.square_name(move.to_square)
+        x2 = d[to_uci[0]]
+        y2 = d[to_uci[1]]
+
+
+        indice_color = 0 if board.turn else 1 #True = White
+
+        h = h ^ piece_hash[(piece - 1) + 6*indice_color][x1][y1]
+        h = h ^ piece_hash[(piece - 1) + 6*indice_color][x2][y2]
+
+        if(to_col == 1):
+            h = h ^ piece_hash[(to_piece - 1)][x2][y2]
+        elif(to_col == 2):
+            h = h ^ piece_hash[(to_piece - 1) + 6][x2][y2]
+
+
+        return h
+
     def play(self, board, h, best_move):
         piece = board.piece_type_at(best_move.from_square)
-        h = self.update_hashcode(piece, board, h, best_move)
+        h = self.update_hashcode_zobriest(piece, board, h, best_move)
         board.push(best_move)
 
         return h
@@ -1353,9 +1380,9 @@ class EasyChessGui:
         """
         if (col == None):
             code = 0
-        elif (col):
+        elif (col): #WHITE
             code = 1
-        else:
+        else: #BLACK
             code = 2
         return code
 
@@ -1372,6 +1399,8 @@ class EasyChessGui:
         is_human_stm = True if self.is_user_white else False
 
         is_new_game, is_exit_game, is_exit_app = False, False, False
+
+        is_promote = False
 
         # For saving game
         move_cnt = 0
@@ -1421,8 +1450,10 @@ class EasyChessGui:
                 elif condition == "UCB":
                     best_move = UCB(board, NB_PLAYOUT)
                 elif condition == "UCT":
-                    best_move = BestMoveUCT(board, h, hashTable, hashTurn, NB_PLAYOUT)
-
+                    best_move = BestMoveUCT(board, h, piece_hash, NB_PLAYOUT)
+                else:
+                    print("ERROR : IA not found")
+                    exit()
                 ####################################
 
                 # Update board with computer move
@@ -1529,7 +1560,7 @@ class EasyChessGui:
                     best_move = moves[rand]
 
                 elif condition == "UCT":
-                    best_move = BestMoveUCT(board, h, hashTable, hashTurn, NB_PLAYOUT)
+                    best_move = BestMoveUCT(board, h, piece_hash, NB_PLAYOUT)
 
                 ###################################
 
@@ -2897,9 +2928,33 @@ def main(condition2, condition1):
 
 
 if __name__ == "__main__":
+
+    ########################
+    # CUSTOM #
+    ########################
     start = time.time()
-    print("Joueur 2 : UCT", "Joueur 1 : UNIFORM")
-    condition2, condition1 = "UCT", "UNIFORM"
+    """
+    Si True, affiche le GUI et montre les coups joués par l'IA.
+    """
+    SHOW_GUI = False
+
+    """
+    Nombre de playouts pour UCT ou UCB
+    """
+    NB_PLAYOUT = 100
+
+    """
+    Nombre de parties à lancer pour les statistiques de jeu
+    """
+    X = 30
+
+    """
+    Choix des IA (UCT, UCB, UNIFORM).
+    condition2 : black
+    condition1 : white
+    """
+    condition2, condition1 = "UCT", "UCB"
+    print("Joueur 2 : ",condition2, "Joueur 1 : ",condition1)
 
     print(main(condition2, condition1))
     print((time.time() - start)//60)

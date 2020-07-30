@@ -3,26 +3,15 @@ import random
 import math
 import time
 
-def score(board):
-    return 1 if board.result(claim_draw=True)=="1-0" else 0
-
-
-def playout(b):
-    start = time.time()
-    while (True):
-        moves = b.legal_moves
-        moves = [i for i in moves]
-        if b.is_game_over():
-            # print(self.board, "\n")
-            #print("PLAYOUT : ", time.time() - start)
-
-            return score(b)
-        n = random.randint(0, len(moves) - 1)
-        b.push(moves[n])
-
 def UCB(board, n):
+    """
+    Algorithme d'UCB pour trouver le best move.
+
+    :param board: de MChess
+    :param n: nombre de playouts
+    :return: best move à partir du board
+    """
     moves = [i for i in board.legal_moves]
-    print(len(moves))
 
     sumScores = [0.0 for x in range(len(moves))]
     nbVisits = [0 for x in range(len(moves))]
@@ -53,3 +42,28 @@ def UCB(board, n):
             bestScore = score
             bestMove = moves[m]
     return bestMove
+
+def score(board):
+    """
+    Renvoie 1 si WHITE gagne, 0 sinon
+    :param board:
+    :return:
+    """
+    return 1 if board.result(claim_draw=True)=="1-0" else 0
+
+
+def playout(b):
+    """
+
+    Joue une partie aléatoire et renvoie le score.
+    :param b:
+    :return:
+    """
+    start = time.time()
+    while (True):
+        moves = b.legal_moves
+        moves = [i for i in moves]
+        if b.is_game_over():
+            return score(b)
+        n = random.randint(0, len(moves) - 1)
+        b.push(moves[n])

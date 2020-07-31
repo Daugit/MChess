@@ -1357,7 +1357,7 @@ class EasyChessGui:
 
         h = h ^ piece_hash[(piece - 1) + 6*indice_color][x1][y1]
         h = h ^ piece_hash[(piece - 1) + 6*indice_color][x2][y2]
-
+        h = h ^ hashTurn
         if(to_col == 1):
             h = h ^ piece_hash[(to_piece - 1)][x2][y2]
         elif(to_col == 2):
@@ -1386,6 +1386,20 @@ class EasyChessGui:
             code = 2
         return code
 
+    def computeHash(self,board):
+        h = 0
+        for square in chess.SQUARES:
+            piece = board.piece_type_at(square)
+            color = board.color_at(square)
+            if(piece != None):
+                indice_color = 0 if color else 1  # True = White
+
+                uci = chess.square_name(square)
+                x = d[uci[0]]
+                y = d[uci[1]]
+
+                h = h ^ piece_hash[(piece - 1) + 6 * indice_color][x][y]
+        return h
     #############################
 
 
@@ -1411,9 +1425,9 @@ class EasyChessGui:
 
         #############################
         # CUSTOM #
-        # Initialisation du hashcode du board à 0 en début de partie, pour UCT
+        # Initialisation du hashcode du board en début de partie, pour UCT
         #############################
-        h = 0
+        h = self.computeHash(board)
         #############################
 
         if (SHOW_GUI):
@@ -1450,7 +1464,7 @@ class EasyChessGui:
                 elif condition == "UCB":
                     best_move = UCB(board, NB_PLAYOUT)
                 elif condition == "UCT":
-                    best_move = BestMoveUCT(board, h, piece_hash, NB_PLAYOUT)
+                    best_move = BestMoveUCT(board, h, piece_hash, hashTurn, NB_PLAYOUT)
                 else:
                     print("ERROR : IA not found")
                     exit()
@@ -1560,7 +1574,7 @@ class EasyChessGui:
                     best_move = moves[rand]
 
                 elif condition == "UCT":
-                    best_move = BestMoveUCT(board, h, piece_hash, NB_PLAYOUT)
+                    best_move = BestMoveUCT(board, h, piece_hash, hashTurn, NB_PLAYOUT)
 
                 ###################################
 
@@ -2936,7 +2950,7 @@ if __name__ == "__main__":
     """
     Si True, affiche le GUI et montre les coups joués par l'IA.
     """
-    SHOW_GUI = False
+    SHOW_GUI = True
 
     """
     Nombre de playouts pour UCT ou UCB
@@ -2953,7 +2967,7 @@ if __name__ == "__main__":
     condition2 : black
     condition1 : white
     """
-    condition2, condition1 = "UCT", "UCB"
+    condition2, condition1 = "UCT", "UNIFORM"
     print("Joueur 2 : ",condition2, "Joueur 1 : ",condition1)
 
     print(main(condition2, condition1))

@@ -67,7 +67,7 @@ def score(board):
     return 1 if board.result(claim_draw=True) == "0-1" else 0
 
 
-def playout(b, h, piece_hash):
+def playout(b, h, piece_hash, hashTurn):
     """
     Joue une partie aléatoire
     :param b:
@@ -81,7 +81,7 @@ def playout(b, h, piece_hash):
         if b.is_game_over():
             return score(b), h
         n = random.randint(0, len(moves) - 1)
-        h = play(b, h, moves[n], piece_hash)
+        h = play(b, h, moves[n], piece_hash, hashTurn)
 
 
 def get_color_code(col):
@@ -132,7 +132,7 @@ def update_hashcode(piece, board, h, hashTable, hashTurn, move):
 
     return h
 
-def update_hashcode_zobriest(piece, board, h, piece_hash, move):
+def update_hashcode_zobriest(piece, board, h, hashTurn, piece_hash, move):
     """
         Update hashcode of a board with Zobriest Hashing
 
@@ -160,7 +160,7 @@ def update_hashcode_zobriest(piece, board, h, piece_hash, move):
 
     h = h ^ piece_hash[(piece - 1) + 6*indice_color][x1][y1]
     h = h ^ piece_hash[(piece - 1) + 6*indice_color][x2][y2]
-
+    h = h ^ hashTurn
     if(to_col == 1):
         h = h ^ piece_hash[(to_piece - 1)][x2][y2]
     elif(to_col == 2):
@@ -168,7 +168,7 @@ def update_hashcode_zobriest(piece, board, h, piece_hash, move):
 
     return h
 
-def play(board, h, best_move, piece_hash):
+def play(board, h, best_move, piece_hash, hashTurn):
     """
 
     Joue un move et update le hashcode du board.
@@ -179,12 +179,12 @@ def play(board, h, best_move, piece_hash):
     :return:
     """
     piece = board.piece_type_at(best_move.from_square)
-    h = update_hashcode_zobriest(piece, board, h, piece_hash, best_move)
+    h = update_hashcode_zobriest(piece, board, h, hashTurn, piece_hash, best_move)
     board.push(best_move)
     return h
 
 
-def UCT(board, h, piece_hash, Table):
+def UCT(board, h, piece_hash, hashTurn, Table):
     """
     IA de l'UCT
 
@@ -220,19 +220,19 @@ def UCT(board, h, piece_hash, Table):
 
         res = 0.0
         if len(moves) > 0:
-            h = play(board, h, moves[best], piece_hash)
-            res, h = UCT(board, h, piece_hash, Table)
+            h = play(board, h, moves[best], piece_hash, hashTurn)
+            res, h = UCT(board, h, piece_hash, hashTurn, Table)
             t[0] += 1
             t[1][best] += 1  # mise à jour à l'indice best, qui est propre au board
             t[2][best] += res
         return res, h
     else:  # Sampling step
         add(board, h, Table)
-        score_playout, h = playout(board, h, piece_hash)
+        score_playout, h = playout(board, h, piece_hash, hashTurn)
         return score_playout, h
 
 
-def BestMoveUCT(board, h, piece_hash, nb_playout):
+def BestMoveUCT(board, h, piece_hash, hashTurn, nb_playout):
     """
     Détermine le best move selon UCT.
     :param board:
@@ -246,7 +246,7 @@ def BestMoveUCT(board, h, piece_hash, nb_playout):
     for i in range(nb_playout):  # on met à jour la table de transposition avec les stats par coup legal
         b1 = copy.deepcopy(board)
         h1 = h
-        UCT(b1, h1, piece_hash, Table)
+        UCT(b1, h1, piece_hash, hashTurn, Table)
     t = look(h, Table)
 
     moves = [i for i in board.legal_moves]
